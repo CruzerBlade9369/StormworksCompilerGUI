@@ -1,6 +1,8 @@
 import subprocess
 import os
 import customtkinter as ctk
+from tkinter import *
+from tkinter import font as f
 from tkinter import filedialog as fd
 from tkinter import messagebox as msb
 
@@ -114,7 +116,7 @@ class Layer1(ctk.CTkFrame):
         self.compile = ctk.CTkButton(self, text="Compile now!", command=FileCompile)
         
         # apply screen items
-        self.compileselectlabel.grid(row=0, column=0, sticky="w", padx=xpad, pady=[40,0])
+        self.compileselectlabel.grid(row=0, column=0, sticky="w", padx=xpad, pady=[30,0])
         self.radiomeshselect.grid(row=1, column=0, sticky="w", padx=xpad, pady=1)
         self.radiotextureselect.grid(row=2, column=0, sticky="w", padx=xpad, pady=1)
         self.openfile.grid(row=3, column=0, sticky="w", padx=xpad, pady=[20,0])
@@ -164,7 +166,7 @@ class Main(ctk.CTk):
 
         # config grid
         self.grid_columnconfigure(0, weight=1)
-        self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=2)
 
         # set screen params
         ctk.set_appearance_mode("dark")
@@ -172,10 +174,14 @@ class Main(ctk.CTk):
         self.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
         # declare screen items
+        self.title = ctk.CTkLabel(self, text= "Stormworks Modding Assets Compiler GUI", 
+                                                justify=LEFT, 
+                                                font=(f.nametofont('TkTextFont'), 25))
         self.layer1 = Layer1(self)
 
         # apply screen items
-        self.layer1.grid(row=0, column=0, sticky="nsew", padx=30, pady=40)
+        self.title.grid(row=0, column=0, sticky="nsew", padx=30, pady=[30, 30])
+        self.layer1.grid(row=1, column=0, sticky="nsew", padx=30, pady=[0, 40])
 
 # define app and main loop
 app = Main()
