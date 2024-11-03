@@ -2,8 +2,6 @@
 Basic GUI app to simplify Stormworks modding asset compiling.
 
 ## App Usage Instructions
-The app relies completely on Stormworks's provided compilation files, thus the app executable must be located in the same directory, normally within `Steam\steamapps\common\Stormworks\sdk`. The app does not do anything on its own, it generates PowerShell commands based selected compile settings, and passes them down to be executed.
-
 This app is designed to work with Stormworks' provided modding SDK. To use it, the app executable must be placed in the same directory as the SDK files, typically located at `Steam\steamapps\common\Stormworks\sdk`. This app helps users compile modding assets by generating and executing the necessary PowerShell commands based on selected compile settings.
 
 Do note that this app is designed to work with Windows-based systems (as it relies on PowerShell, functionality on other systems are not tested), and requires users to have the Stormworks modding SDK.
