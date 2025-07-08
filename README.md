@@ -1,4 +1,4 @@
-# StormworksCompilerGUI
+# Stormworks Compiler GUI
 Basic GUI app to simplify Stormworks modding asset compiling.
 
 ## App Usage Instructions
